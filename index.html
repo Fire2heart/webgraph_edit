@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&family=Orienta&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+</style>
+
+<body>
+    <div class="container">
+        <div class="result">
+            <div class="parametr">
+                <a class="grey">ID сделки:</a>
+                <a class="dark" id="trade_id">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">ID кошелька:</a>
+                <a class="dark" id="wallet_id">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Статус сделки:</a>
+                <a class="dark">CLOSE</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Тип:</a>
+                <a class="green" id="trade_type_rus">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Цена открытия:</a>
+                <a class="dark" id="opening_price_draw_rus">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Цена закрытия:</a>
+                <a class="dark" id="closing_price_draw_rus">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Инвестированно:</a>
+                <a class="dark" id="invested_draw_rus">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Комиссия:</a>
+                <a class="dark" id="comission_draw_rus">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Валюта кошелька:</a>
+                <a class="dark">USD</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Валюта сделки:</a>
+                <a class="dark" id="trade_currency_draw_rus">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Плечо:</a>
+                <a class="dark" id="leverage_draw_rus">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Тип открытия:</a>
+                <a class="dark">MARKET</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Тип закрытия:</a>
+                <a class="dark">TAKE_PROFIT</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Дата создания:</a>
+                <a class="dark" id="start_date_draw_rus">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Дата закрытия:</a>
+                <a class="dark" id="close_date_draw_rus">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Прибыль:</a>
+                <a class="green" id="profit_draw_rus">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Доходность:</a>
+                <a class="green" id="yield_draw_rus">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+        </div>
+        <div class="user">
+            <form type="text">
+                <h3>Editor</h3>
+                <div>
+                    <label for="currency">Price currency:</label><input class="info" id="currency" type="text" name="currency"
+                        placeholder="USD" value="USD">
+                </div>
+                <div>
+                    <label for="transaction_currency">Transaction currency:</label><input class="info" id="transaction_currency"
+                        type="text" name="transaction_currency" placeholder="BTC">
+                </div>
+                <div>
+                    <label for="opening_price">Opening price:</label><input class="info" type="text" id="opening_price"
+                        name="opening_price" placeholder="value">
+                </div>
+                <div>
+                    <label for="investment">Investment:</label><input class="info" type="text" id="investment" name="investment"
+                        placeholder="value">
+                </div>
+                <div>
+                    <label for="commission_rate">Commission rate (%):</label><input class="info" type="text" id="commission_rate"
+                        name="commission_rate" placeholder="0.5" value="0.5">
+                </div>
+                <div>
+                    <label for="leverage">Leverage (5,10,100):</label><input class="info" type="text" id="leverage" name="leverage"
+                        placeholder="10" value="10">
+                </div>
+                <div>
+                    <label for="yield">Yield (%):</label><input class="info" type="text" id="yield" name="yield" placeholder="value">
+                </div>
+
+
+                <div>
+                    <label for="start_date">Start date:</label>
+                    <input class="info" type="date" id="start_date" />
+                    <label for="start_time">Start time:</label>
+                    <input class="info" type="time" id="start_time" step="2" />
+                </div>
+                <div>
+                    <label for="close_date">Close date:</label>
+                    <input class="info" type="date" id="close_date" />
+                    <label for="close_time">Close time:</label>
+                    <input class="info" type="time" id="close_time" step="2" />
+                </div>
+                <div>
+                    <p style="color: green"><input style="margin-right: 7px" type="radio" id="buy" name="trade_type"
+                            value="buy" checked>BUY</p>
+                    <p style="color: red"><input style="margin-right: 7px" type="radio" id="sell" name="trade_type"
+                            value="sell">SELL</p>
+                </div>
+                <div class="buttons">
+                    <button id="confirm_btn">Confirm</button>
+                    <button>Reset</button>
+                </div>
+            </form>
+        </div>
+        <div class="result">
+            <div class="parametr">
+                <a class="grey">Trade ID:</a>
+                <a class="dark" id="trade_id_rus">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Wallet ID:</a>
+                <a class="dark" id="wallet_id_rus">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Trade status:</a>
+                <a class="dark">CLOSE</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Type:</a>
+                <a class="green" id="trade_type">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Opening price:</a>
+                <a class="dark" id="opening_price_draw">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Closing price:</a>
+                <a class="dark" id="closing_price_draw">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Invested:</a>
+                <a class="dark" id="invested_draw">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Commission:</a>
+                <a class="dark" id="comission_draw">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Wallet currency:</a>
+                <a class="dark">USD</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Transaction currency:</a>
+                <a class="dark" id="trade_currency_draw">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Leverage:</a>
+                <a class="dark" id="leverage_draw">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Opening type:</a>
+                <a class="dark">MARKET</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Closure type:</a>
+                <a class="dark">TAKE_PROFIT</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Date of Creation:</a>
+                <a class="dark" id="start_date_draw">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Closing Date:</a>
+                <a class="dark" id="close_date_draw">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Profit:</a>
+                <a class="green" id="profit_draw">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+            <div class="parametr">
+                <a class="grey">Yield:</a>
+                <a class="green" id="yield_draw">---</a>
+            </div>
+            <hr style="border: 0; height: 1px; background-color: #b3b3b382;">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

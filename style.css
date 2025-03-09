@@ -1,0 +1,67 @@
+body {
+    font-family: "Orienta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+}  
+
+.container{
+    display: flex;
+}
+
+.user{
+    border: solid;
+    border-radius: 20px;
+    border-color: rgba(128, 128, 128, 0.181);
+    padding: 10px 50px;
+    margin: 0  50px;
+}
+
+.info{
+    width: 100%;
+}
+
+input{
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+.result{
+    /* background-color: red; */
+    border: solid;
+    border-radius: 20px;
+    border-color: rgba(128, 128, 128, 0.181);
+    padding: 30px 50px;
+    width: 500px;
+    height: 100%;
+}
+
+.parametr{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.grey {
+    color: grey;
+    font-weight: bold;
+}
+
+.dark {
+    font-weight: bold;
+}
+
+.green{
+    color: green;
+}
+
+.red{
+    color: red;
+}
+
+/* div:after {
+    content: '';
+    background-color: black;
+    height: 1px;
+    display: block;
+} */
